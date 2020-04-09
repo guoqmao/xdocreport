@@ -2,14 +2,29 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.opensagres.xdocreport</groupId>
 	<artifactId>xdocreport-parent</artifactId>
-	<version>1.0.6</version>
+	<version>guoqmao-1.0.6</version>
 	<packaging>pom</packaging>
 	<description>XDocReport means XML Document reporting. It's Java API to merge XML document created with MS Office (docx) or OpenOffice (odt), LibreOffice (odt) with a Java model to generate report and convert it if you need to another format (PDF, XHTML...).</description>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
+<!--	<parent>-->
+<!--		<groupId>org.sonatype.oss</groupId>-->
+<!--		<artifactId>oss-parent</artifactId>-->
+<!--		<version>7</version>-->
+<!--	</parent>-->
+	<!-- 发布到远程Nexus仓库配置 -->
+	<distributionManagement>
+		<repository>
+			<id>cms-release</id>
+			<name>cms-release</name>
+			<url>http://183.131.15.29:8081/repository/cms-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>cms-snapshots</id>
+			<name>cms-snapshots</name>
+			<url>http://183.131.15.29:8081/repository/cms-snapshots/</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<licenses>
 		<license>
 			<name>The MIT License (MIT)</name>
